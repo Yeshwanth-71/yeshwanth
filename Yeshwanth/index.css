@@ -1,0 +1,203 @@
+body{
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+.navbar-nav {
+    text-align: center;
+  }
+  .circle img {
+    border-radius: 50%;
+    max-width: 100%;
+  }
+  .introduction h2, .introduction p {
+    text-align: center;
+    color: #fff;
+  }
+  .about-text, .skill-box, .portfolio-text {
+    text-align: center;
+  }
+  .progress-bar {
+    background-color: #4caf50;
+  }
+  .filter button {
+    margin: 10px;
+  }
+  .work .card {
+    margin-bottom: 15px;
+  }
+  /* Mobile-first styling */
+  @media (max-width: 768px) {
+    .navbar-nav {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .circle img {
+      width: 150px;
+      height: 150px;
+    }
+    .introduction h3 {
+      font-size: 24px;
+    }
+    .progress-bar {
+      width: 100%;
+    }
+    .filter button {
+      margin: 5px;
+    }
+    .work .card img {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .introduction h2 {
+      font-size: 28px;
+    }
+    .introduction p {
+      font-size: 14px;
+    }
+    .skills h6 {
+      font-size: 12px;
+    }
+    .portfolio-text h2 {
+      font-size: 24px;
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes erasing {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  .filter-item {
+    display: block; /* Make sure all items are displayed by default */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .filter-item img {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .filter-item img:hover {
+    transform: scale(1.05);
+  }
+  
+
+  /* Styling for typing effect */
+  .animated-text {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid black; /* Simulates cursor */
+    width: 0; /* Hidden by default */
+    animation: typing 3s steps(30, end) 0s infinite alternate,
+               blink 0.7s step-end infinite;
+  }
+
+  .navbar-nav .nav-link {
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  .navbar-nav .nav-link:hover {
+    color: aqua; 
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px; 
+  }
+
+  
+  .navbar-nav .nav-link.active {
+    color: aqua; 
+    font-weight: bold;
+  }
+  .custom-progress {
+    background-color: rgba(81, 79, 150, 0.621); 
+    color: #fff; 
+  }
+
+  .card {
+    position: relative;
+    overflow: hidden;
+  }
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+  }
+  .card:hover .overlay {
+    opacity: 1;
+  }
+  .overlay .btn {
+    margin: 0 5px;
+  }
+  .circle {
+    position: relative;
+    display: inline-block;
+    animation: bounce 2s infinite;
+  }
+  
+  .circle img {
+    border-radius: 50%;
+    max-width: 100%;
+    height: 300px;
+    border: 2px solid aqua;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+
+  .custom-progress-bar {
+    height: 10px; 
+    max-width: 75%; 
+  }
+  
+  .custom-progress-bar .progress-bar {
+    background-color: #17a2b8; 
+  }
+  
+  
+
+  
